@@ -1,11 +1,13 @@
-import styles from "./Shop.module.css"
-import "../../App.css"
+import styles from "./Shop.module.css";
+import "../../App.css";
+import { useShoppingApi } from "./data/products";
 
+export function Shop() {
+  const { data, error, loading } = useShoppingApi();
 
-export function Shop () {
-    return (
-        <div className="content">
-            <h1>Shop</h1>
-        </div>
-)
+  return (
+    <div className={`${styles.shop} content`}>
+      <h1>Shop</h1>
+    </div>
+  );
 }
