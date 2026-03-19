@@ -5,7 +5,7 @@ import { useShoppingApi } from './data/products'
 
 function App() {
 
-  const {data, error} = useShoppingApi();
+  const {data, error, loading} = useShoppingApi();
 
   return (
     <>

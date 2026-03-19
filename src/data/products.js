@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 export function useShoppingApi() {
   const [data, setData] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getData() {
@@ -13,12 +14,13 @@ export function useShoppingApi() {
         }
         const responseData = await response.json();
         setData(responseData);
+        setLoading(false);
       } catch (err) {
-        setError(err)
+        setError(err);
       }
     }
     getData();
   }, []);
 
-  return { data, error };
+  return { data, error, loading };
 }
