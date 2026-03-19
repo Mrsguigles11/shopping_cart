@@ -5,7 +5,6 @@ let cachedData = null;
 export function useShoppingApi() {
   const [data, setData] = useState(cachedData);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (cachedData) return;
@@ -19,7 +18,7 @@ export function useShoppingApi() {
         const responseData = await response.json();
         cachedData = responseData;
         setData(responseData);
-        setLoading(false);
+        console.log(responseData)
       } catch (err) {
         setError(err);
       }
@@ -27,5 +26,5 @@ export function useShoppingApi() {
     getData();
   }, []);
 
-  return { data, error, loading };
+  return { data, error };
 }
