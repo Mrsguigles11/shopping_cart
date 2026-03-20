@@ -9,3 +9,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
+
+.loading {
+    grid-column-start: 3;
+}
