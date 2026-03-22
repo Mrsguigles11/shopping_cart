@@ -5,7 +5,7 @@ import { useBasketFunc } from './hooks/basketFunc'
 
 function App() {
 
-  const {total, addItem} = useBasketFunc();
+  const {total, addItem, basket} = useBasketFunc();
 
   return (
     <>

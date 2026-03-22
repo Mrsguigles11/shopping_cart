@@ -1,16 +1,39 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { RouterProvider, createMemoryRouter } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import App from "../src/App";
-import routes from "../src/routes.jsx";
+import { Home } from "../src/components/home/Home";
+import { Basket } from "../src/components/basket/Basket";
+import { Shop } from "../src/components/shop/Shop";
+import { MemoryRouter } from "react-router";
 
 describe("App component", () => {
+  
   it("renders home page on page load", () => {
-    const router = createMemoryRouter(routes, {
-      initialEntries: ["/"], // starting URL
-    });
 
-    render(<RouterProvider router={router} />);
-    expect(screen.getByRole("heading", { name: "Home" })).toBeInTheDocument();
-  });
+beforeEach(() => {
+  globalThis.fetch = vi.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve({ message: "hello" })
+    })
+  );
+});
+  
+  const router = createMemoryRouter(
+    [
+      {
+    path: "/",
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "shop", element: <Shop /> },
+      { path: "basket", element: <Basket /> },
+    ],
+      }
+    ],
+    { initialEntries: ["/"] }
+  );
+
+  render(<RouterProvider router={router} />);
+    expect(screen.getByRole("heading").textContent).toMatch(/Home/i);  });
 });

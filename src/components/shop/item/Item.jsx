@@ -7,7 +7,7 @@ export function Item({data, addItem}) {
             <h1 className={styles.text}>{data.title}</h1>
             <img src={data.image} alt={data.title + " image"} className={styles.image}/>
             <p className={styles.text}>{data.price}</p>
-            <button onClick={addItem}>Add to Basket</button>
+            <button onClick={() => addItem(data.id)}>Add to Basket</button>
         </div>
     )
 }
