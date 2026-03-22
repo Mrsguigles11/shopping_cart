@@ -1,0 +1,14 @@
+.basket {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 100px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}

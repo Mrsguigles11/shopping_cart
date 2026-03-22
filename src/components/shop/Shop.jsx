@@ -6,7 +6,7 @@ import { useOutletContext } from "react-router";
 
 export function Shop() {
   const { data, error } = useShoppingApi();
-  const addItem = useOutletContext();;
+  const {addItem} = useOutletContext();;
 
   return (
     <div className={`${styles.shop} content`}>

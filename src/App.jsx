@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header total={total}/>
-      <Outlet context={addItem}/>
+      <Outlet context={{addItem, basket}}/>
     </>
   )
 }
