@@ -10,13 +10,18 @@ export function useBasketFunc() {
     const hasItem = newBasket.some((item) => item.id === id);
 
     if (!hasItem) {
-      newBasket.push({ id: id, quantity: quantity, title: title, image: image });
+      newBasket.push({
+        id: id,
+        quantity: quantity,
+        title: title,
+        image: image,
+      });
     }
 
     if (hasItem) {
       newBasket.map((item) => {
         if (item.id === id) {
-          item.quantity = item.quantity + quantity
+          item.quantity = item.quantity + quantity;
         }
       });
     }
@@ -25,5 +30,18 @@ export function useBasketFunc() {
     setTotal((prev) => prev + quantity);
   }
 
-  return { total, addItem, basket };
+  function removeItem(id, quantity) {
+    let newBasket = [...basket];
+
+    newBasket.map((item) => {
+      if (item.id === id) {
+        newBasket.splice(newBasket.indexOf(item), 1);
+      }
+    });
+
+    setBasket(newBasket);
+    setTotal(prev => prev - quantity)
+  }
+
+  return { total, addItem, basket, removeItem };
 }
