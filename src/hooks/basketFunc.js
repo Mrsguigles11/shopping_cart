@@ -4,25 +4,25 @@ export function useBasketFunc() {
   const [basket, setBasket] = useState([]);
   const [total, setTotal] = useState(0);
 
-  function addItem(id, title, image) {
+  function addItem(id, quantity, title, image) {
     let newBasket = [...basket];
 
     const hasItem = newBasket.some((item) => item.id === id);
 
     if (!hasItem) {
-      newBasket.push({ id: id, quantity: 1, title: title, image: image });
+      newBasket.push({ id: id, quantity: quantity, title: title, image: image });
     }
 
     if (hasItem) {
       newBasket.map((item) => {
         if (item.id === id) {
-          item.quantity++;
+          item.quantity = item.quantity + quantity
         }
       });
     }
 
     setBasket(newBasket);
-    setTotal((prev) => prev + 1);
+    setTotal((prev) => prev + quantity);
   }
 
   return { total, addItem, basket };
