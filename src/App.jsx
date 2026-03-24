@@ -5,12 +5,12 @@ import { useBasketFunc } from './hooks/basketFunc'
 
 function App() {
 
-  const {total, addItem, basket, removeItem} = useBasketFunc();
+  const {total, addItem, basket, removeItem, editQuantity} = useBasketFunc();
 
   return (
     <>
       <Header total={total}/>
-      <Outlet context={{addItem, basket, removeItem}}/>
+      <Outlet context={{addItem, basket, removeItem, editQuantity}}/>
     </>
   )
 }

@@ -40,8 +40,27 @@ export function useBasketFunc() {
     });
 
     setBasket(newBasket);
-    setTotal(prev => prev - quantity)
+    setTotal((prev) => prev - quantity);
   }
 
-  return { total, addItem, basket, removeItem };
+  function editQuantity(type, id) {
+    let newBasket = [...basket];
+
+    if (type === "increase") {
+      newBasket.map((item) => {
+        item.id === id ? item.quantity++ : item;
+      });
+      setTotal((prev) => prev + 1);
+    }
+    if (type === "decrease") {
+      newBasket.map((item) => {
+        item.id === id ? item.quantity-- : item;
+      });
+      setTotal((prev) => prev - 1);
+    }
+
+    setBasket(newBasket);
+  }
+
+  return { total, addItem, basket, removeItem, editQuantity };
 }

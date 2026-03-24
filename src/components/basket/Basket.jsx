@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router";
 import "../../App.css";
 
 export function Basket() {
-  const { basket, removeItem } = useOutletContext();
+  const { basket, removeItem, editQuantity } = useOutletContext();
 
   return (
     <div className={`${styles.basket} content`}>
@@ -22,8 +22,16 @@ export function Basket() {
                 alt={item.title + " image"}
                 className={styles.img}
               />
+              <button onClick={() => editQuantity("decrease", item.id)}>
+                -
+              </button>
               <div>{item.quantity}</div>
-              <button onClick={() => removeItem(item.id, item.quantity)}>Remove</button>
+              <button onClick={() => editQuantity("increase", item.id)}>
+                +
+              </button>
+              <button onClick={() => removeItem(item.id, item.quantity)}>
+                Remove
+              </button>
             </div>
           );
         })
