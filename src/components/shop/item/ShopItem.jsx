@@ -1,7 +1,7 @@
-import styles from "./Item.module.css";
+import styles from "./ShopItem.module.css";
 import { useState } from "react";
 
-export function Item({ data, addItem }) {
+export function ShopItem({ data, addItem }) {
   const [quantity, setQuantity] = useState(1);
 
   return (

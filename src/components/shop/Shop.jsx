@@ -1,7 +1,7 @@
 import styles from "./Shop.module.css";
 import "../../App.css";
 import { useShoppingApi } from "../../data/products";
-import { Item } from "./item/Item";
+import { ShopItem } from "./item/ShopItem";
 import { useOutletContext } from "react-router";
 
 export function Shop() {
@@ -13,7 +13,7 @@ export function Shop() {
       {error ? <div>{error}</div> : <></>}
       <div className={styles.container}>
       {data ? data.map((item) => {
-        return <Item data={item} key={item.id} addItem={addItem}/>
+        return <ShopItem data={item} key={item.id} addItem={addItem}/>
       }) : <div className={styles.loading}>Loading...</div>}
       </div>
     </div>
