@@ -13,7 +13,7 @@ export function ShopItem({ data, addItem }) {
         className={styles.image}
       />
       <p className={styles.text}>{data.price}</p>
-      <button onClick={() => addItem(data.id, quantity, data.title, data.image)}>
+      <button onClick={() => addItem(data.id, quantity, data.title, data.image, data.price)}>
         Add to Basket
       </button>
       <div>

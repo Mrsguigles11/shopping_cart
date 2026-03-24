@@ -4,7 +4,7 @@ import "../../App.css";
 import { BasketItem } from "./basketItem/BasketItem";
 
 export function Basket() {
-  const { basket, removeItem, editQuantity } = useOutletContext();
+  const { basket, removeItem, editQuantity, totalPrice } = useOutletContext();
 
   return (
     <div className={`${styles.basket} content`}>
@@ -25,6 +25,7 @@ export function Basket() {
           );
         })
       )}
+      <h2>{totalPrice}</h2>
     </div>
   );
 }
