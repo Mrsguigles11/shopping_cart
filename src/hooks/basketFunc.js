@@ -54,9 +54,9 @@ export function useBasketFunc() {
     }
     if (type === "decrease") {
       newBasket.map((item) => {
-        item.id === id ? item.quantity-- : item;
+        item.id === id && item.quantity > 1 ? item.quantity-- : item;
       });
-      setTotal((prev) => prev - 1);
+      setTotal((prev) => prev > 1 ? prev - 1 : prev);
     }
 
     setBasket(newBasket);
