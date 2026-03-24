@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-// bug when deleting item in basket I get a wierd number not 0
-
 export function useBasketFunc() {
   const [basket, setBasket] = useState([]);
   const [total, setTotal] = useState(0);
@@ -40,7 +38,9 @@ export function useBasketFunc() {
 
     newBasket.map((item) => {
       if (item.id === id) {
-        setTotalPrice((prev) => prev - item.price * item.quantity);
+        setTotalPrice(
+          (prev) => Math.round((prev - item.price * quantity) * 100) / 100,
+        );
         newBasket.splice(newBasket.indexOf(item), 1);
       }
     });
@@ -63,7 +63,7 @@ export function useBasketFunc() {
       newBasket.map((item) => {
         if (item.id === id && item.quantity > 1) {
           item.quantity--;
-          setTotalPrice((prev) => prev - item.price);
+          setTotalPrice((prev) => Math.round((prev - item.price) * 100) / 100);
         }
       });
       setTotal((prev) => (prev > 1 ? prev - 1 : prev));
