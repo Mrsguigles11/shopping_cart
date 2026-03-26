@@ -26,7 +26,7 @@ export function ShopItem({ data, addItem }) {
         >
           -
         </button>
-        <input type="number" name="quantity" value={quantity} />
+        <input type="number" name="quantity" value={quantity} readOnly/>
         <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
       </div>
     </div>
