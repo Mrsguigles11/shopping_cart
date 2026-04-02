@@ -1,8 +1,25 @@
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     column-gap: 10px;
-    padding-top: 10px;
-    height: 10vh;
+    padding: 10px 20px;
+    height: 100px;
+    background-color: #E3DBBB;
+    /* box-shadow: inset 0px -2px 7px -4px #000000; */
+}
+
+.heading {
+    color: #41431B;
+}
+
+.links {
+    display: flex;
+    column-gap: 10px;
+}
+
+.links > a {
+    color: inherit;
+    text-decoration: none;
 }

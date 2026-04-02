@@ -1,3 +1,4 @@
 .content {
-    min-height: 90vh;
+    background-color: #F8F3E1;
+    flex-grow: 1;
 }

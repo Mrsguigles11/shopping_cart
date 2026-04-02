@@ -10,7 +10,6 @@ export function Shop() {
 
   return (
     <div className={`${styles.shop} content`}>
-      <h1>Shop</h1>
       {error ? <div>{error}</div> : <></>}
       <div className={styles.container}>
       {data ? data.map((item) => {
