@@ -4,14 +4,14 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 10px;
-    padding: 10px 20px;
+    padding: 10px 10vw;
     height: 100px;
-    background-color: #E3DBBB;
+    background-color: var(--green);
     /* box-shadow: inset 0px -2px 7px -4px #000000; */
 }
 
 .heading {
-    color: #41431B;
+    color: var(--cream);
 }
 
 .links {
@@ -20,6 +20,6 @@
 }
 
 .links > a {
-    color: inherit;
+    color: var(--cream);
     text-decoration: none;
 }

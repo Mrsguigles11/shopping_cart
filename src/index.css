@@ -8,6 +8,8 @@
 
 :root {
   font-family: "Manrope", sans-serif;
+  --green: #41431B;
+  --cream: #E3DBBB;
 }
 
 #root {
