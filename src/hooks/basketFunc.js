@@ -55,7 +55,7 @@ export function useBasketFunc() {
     if (type === "increase") {
       newBasket.map((item) => {
         item.id === id ? item.quantity++ : item;
-        setTotalPrice((prev) => prev + item.price);
+        setTotalPrice((prev) => Math.round((prev + item.price) * 100) / 100);
       });
       setTotal((prev) => prev + 1);
     }

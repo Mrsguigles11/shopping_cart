@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    column-gap: 10px;
+    width: 50vw;
+}
+
+.quantity {
+    display: flex;
+    column-gap: 5px;
+}
+
+.quantity > button {
+    width: 20px;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.content_container {
+    display: flex;
+    column-gap: 30px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.details > h2 {
+    font-size: 0.8rem;
+}
+
+.remove_button {
+    font-family: inherit;
+    background-color: white;
+    width: 60px;
+    border: none;
+    color:darkred;
+    text-align: start;
+    margin-top: 10px;
+    cursor: pointer;
+}
