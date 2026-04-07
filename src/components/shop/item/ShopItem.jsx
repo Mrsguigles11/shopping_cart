@@ -6,28 +6,34 @@ export function ShopItem({ data, addItem }) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.text}>{data.title}</h1>
-      <img
-        src={data.image}
-        alt={data.title + " image"}
-        className={styles.image}
-      />
-      <p className={styles.text}>{data.price}</p>
-      <button onClick={() => addItem(data.id, quantity, data.title, data.image, data.price)}>
-        Add to Basket
-      </button>
+      <div className={styles.img_heading_container}>
+        <img
+          src={data.image}
+          alt={data.title + " image"}
+          className={styles.image}
+        />
+        <h1 className={styles.heading}>{data.title}</h1>
+      </div>
       <div>
-        <button
-          onClick={() => {
-            if (quantity !== 1) {
-              setQuantity((prev) => prev - 1);
-            }
-          }}
-        >
-          -
-        </button>
-        <div>{quantity}</div>
-        <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+        <p className={styles.price}>${data.price}</p>
+        <div className={styles.buttons}>
+          <button onClick={() => addItem(data.id, quantity, data.title, data.image, data.price)}>
+            Add to Basket
+          </button>
+          <div className={styles.quantity}>
+            <button
+              onClick={() => {
+                if (quantity !== 1) {
+                  setQuantity((prev) => prev - 1);
+                }
+              }}
+            >
+              -
+            </button>
+            <div>{quantity}</div>
+            <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+        </div>
+        </div>
       </div>
     </div>
   );
