@@ -9,6 +9,10 @@
     width: 50vw;
 }
 
+.container > h2 {
+    font-size: 1.2rem;
+}
+
 .quantity {
     display: flex;
     column-gap: 5px;
@@ -24,6 +28,7 @@
 .content_container {
     display: flex;
     column-gap: 30px;
+    max-width: 80%;
 }
 
 .details {
@@ -31,6 +36,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    row-gap: 10px;
 }
 
 .details > h2 {
