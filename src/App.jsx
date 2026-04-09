@@ -11,7 +11,7 @@ function App() {
     <>
       <Header total={total} />
       <Outlet
-        context={{ addItem, basket, removeItem, editQuantity, totalPrice }}
+        context={{ addItem, basket, removeItem, editQuantity, totalPrice, total }}
       />
     </>
   );

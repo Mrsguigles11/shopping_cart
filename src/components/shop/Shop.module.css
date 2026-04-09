@@ -21,12 +21,6 @@
 }
 
 .error_button {
-    text-decoration: none;
-    background-color: var(--green);
-    color: var(--cream);
-    font-family: inherit;
-    border: none;
     padding: 10px 20px;
-    border-radius: 10px;
     margin-top: 10px;
 }

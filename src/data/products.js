@@ -9,14 +9,14 @@ export function useShoppingApi() {
   const getData = async () => {
     setError(null)
       try {
-        const response = await fetch("https://fakestoreapi.com/products/");
-        console.log(response)
-        // const response = await fetch("https://dummyjson.com/products")
+        // const response = await fetch("https://fakestoreapi.com/products/");
+        const response = await fetch("https://dummyjson.com/products")
         if (!response.ok) {
           throw new Error("server error");
         }
         let responseData = await response.json();
-        // responseData = responseData.products
+        responseData = responseData.products;
+        console.log(responseData)
         cachedData = responseData;
         setData(responseData);
       } catch (err) {

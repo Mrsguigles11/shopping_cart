@@ -41,16 +41,10 @@
     align-items: center;
 }
 
-.buttons>button {
+.add_to_basket {
     height: 30px;
-    background-color: var(--green);
-    color: var(--cream);
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
     border-radius: 5px;
     padding: 5px 10px;
-    font-family: inherit;
 }
 
 .quantity {

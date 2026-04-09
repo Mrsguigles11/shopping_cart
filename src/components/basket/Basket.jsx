@@ -4,7 +4,7 @@ import "../../App.css";
 import { BasketItem } from "./basketItem/BasketItem";
 
 export function Basket() {
-  const { basket, removeItem, editQuantity, totalPrice } = useOutletContext();
+  const { basket, removeItem, editQuantity, totalPrice, total } = useOutletContext();
 
   return (
     <div className={`${styles.basket} content`}>
@@ -14,20 +14,30 @@ export function Basket() {
           Oops nothing here yet! Add items in the shop to review the basket
         </div>
       ) : (
-        basket.map((item) => {
-          return (
-            <BasketItem
-              item={item}
-              removeItem={removeItem}
-              editQuantity={editQuantity}
-              key={item.id}
-            />
-          );
-        })
+        <div className={styles.basket_content}>
+          <div>
+            {basket.map((item) => {
+              return (
+                <BasketItem
+                  item={item}
+                  removeItem={removeItem}
+                  editQuantity={editQuantity}
+                  key={item.id}
+                />
+              );
+            })}
+          </div>
+          <div className={styles.total}>
+            <h3>Order Summary</h3>
+            <h2>${totalPrice}</h2>
+            <div className={styles.subtotal}>
+              <p>Subtotal ({total} items)</p>
+              <p>${totalPrice}</p>
+            </div>
+            <button className={`${styles.checkout} button`}>Checkout</button>
+          </div>
+        </div>
       )}
-      <div className={styles.total}>
-        <h2>${totalPrice}</h2>
-      </div>
     </div>
   );
 }

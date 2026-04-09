@@ -1,12 +1,13 @@
 import styles from "./BasketItem.module.css";
 
 export function BasketItem({item, removeItem, editQuantity}) {
+  console.log(item)
   return (
     <div className={styles.container}>
       <div>
         <div className={styles.content_container}>
           <img
-            src={item.image}
+            src={item.thumbnail}
             alt={item.title + " image"}
             className={styles.img}
           />

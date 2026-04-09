@@ -8,7 +8,7 @@ export function ShopItem({ data, addItem }) {
     <div className={styles.container}>
       <div className={styles.img_heading_container}>
         <img
-          src={data.image}
+          src={data.thumbnail}
           alt={data.title + " image"}
           className={styles.image}
         />
@@ -17,7 +17,7 @@ export function ShopItem({ data, addItem }) {
       <div>
         <p className={styles.price}>${data.price}</p>
         <div className={styles.buttons}>
-          <button onClick={() => addItem(data.id, quantity, data.title, data.image, data.price)}>
+          <button onClick={() => addItem(data.id, quantity, data.title, data.image, data.price)} className={`${styles.add_to_basket} button`}>
             Add to Basket
           </button>
           <div className={styles.quantity}>

@@ -2,3 +2,13 @@
     background-color: #F8F3E1;
     flex-grow: 1;
 }
+
+.button {
+    text-decoration: none;
+    background-color: var(--green);
+    color: var(--cream);
+    font-family: inherit;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
