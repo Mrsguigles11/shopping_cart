@@ -25,7 +25,9 @@ export function Basket() {
           );
         })
       )}
-      <h2>${totalPrice}</h2>
+      <div className={styles.total}>
+        <h2>${totalPrice}</h2>
+      </div>
     </div>
   );
 }
