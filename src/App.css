@@ -1,6 +1,7 @@
 .content {
     background-color: #F8F3E1;
     flex-grow: 1;
+    min-height: calc(100vh - 100px);
 }
 
 .button {
