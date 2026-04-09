@@ -13,11 +13,12 @@ export function ShopItem({ data, addItem }) {
           className={styles.image}
         />
         <h1 className={styles.heading}>{data.title}</h1>
+        <i className={styles.description}>{data.description}</i>
       </div>
       <div>
         <p className={styles.price}>${data.price}</p>
         <div className={styles.buttons}>
-          <button onClick={() => addItem(data.id, quantity, data.title, data.image, data.price)} className={`${styles.add_to_basket} button`}>
+          <button onClick={() => addItem(data.id, quantity, data.title, data.thumbnail, data.price)} className={`${styles.add_to_basket} button`}>
             Add to Basket
           </button>
           <div className={styles.quantity}>

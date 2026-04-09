@@ -1,13 +1,12 @@
 import styles from "./BasketItem.module.css";
 
 export function BasketItem({item, removeItem, editQuantity}) {
-  console.log(item)
   return (
     <div className={styles.container}>
       <div>
         <div className={styles.content_container}>
           <img
-            src={item.thumbnail}
+            src={item.image}
             alt={item.title + " image"}
             className={styles.img}
           />
@@ -24,7 +23,7 @@ export function BasketItem({item, removeItem, editQuantity}) {
           </div>
         </div>
       </div>
-      <h2>${item.quantity * item.price}</h2>
+      <h2>${Math.round((item.quantity * item.price) * 100) / 100}</h2>
     </div>
   );
 }

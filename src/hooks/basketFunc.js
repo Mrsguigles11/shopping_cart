@@ -28,7 +28,7 @@ export function useBasketFunc() {
       });
     }
 
-    setTotalPrice((prev) => prev + price * quantity);
+    setTotalPrice((prev) => Math.round((prev + price * quantity) * 100) / 100);
     setBasket(newBasket);
     setTotal((prev) => prev + quantity);
   }
@@ -55,8 +55,8 @@ export function useBasketFunc() {
     if (type === "increase") {
       newBasket.map((item) => {
         if (item.id === id) {
-        item.quantity++
-        setTotalPrice((prev) => Math.round((prev + item.price) * 100) / 100);
+          item.quantity++;
+          setTotalPrice((prev) => Math.round((prev + item.price) * 100) / 100);
         }
       });
       setTotal((prev) => prev + 1);
@@ -66,9 +66,9 @@ export function useBasketFunc() {
         if (item.id === id && item.quantity > 1) {
           item.quantity--;
           setTotalPrice((prev) => Math.round((prev - item.price) * 100) / 100);
+          setTotal((prev) => (prev > 1 ? prev - 1 : prev));
         }
       });
-      setTotal((prev) => (prev > 1 ? prev - 1 : prev));
     }
 
     setBasket(newBasket);

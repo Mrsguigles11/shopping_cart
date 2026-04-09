@@ -7,9 +7,9 @@ export function Home() {
     <div className={`${styles.home} content`}>
       <div className={styles.home_content}>
         <div className={styles.home_content_txt}>
-          <h2 className={styles.header}>Welcome to The Odin Shop</h2>
+          <h2 className={styles.header}>Odin Son</h2>
           <i>
-            Come check out our sustainable clothes made with love for mother earth
+            Come check out our totally real items in this totally real shop
           </i>
         </div>
         <Link to="/shop" className={styles.link}>Shop Now</Link>

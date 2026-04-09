@@ -18,9 +18,14 @@
 
 .heading {
     font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 0.6rem;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
