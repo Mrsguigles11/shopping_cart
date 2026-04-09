@@ -7,7 +7,10 @@ export default function Header({total}) {
 
   return (
     <div className={styles.header}>
-      <h1 className={styles.heading}>The Odin Shop</h1>
+      <div className={styles.heading_container}>
+        <img src="../src/img/odin_logo.png" alt="odin_shop_logo" className={styles.logo}/>
+        <h1 className={styles.heading}>ODIN</h1>
+      </div>
       <div className={styles.links}>
         <Link className={currentPage === "home" ? styles.underlined : ""} to="/" onClick={() => setCurrentPage("home")}>Home</Link>
         <Link className={currentPage === "shop" ? styles.underlined : ""} to="/shop" onClick={() => setCurrentPage("shop")}>Shop</Link>
