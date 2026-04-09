@@ -15,7 +15,6 @@ export function useShoppingApi() {
         }
         let responseData = await response.json();
         responseData = responseData.products;
-        console.log(responseData)
         cachedData = responseData;
         setData(responseData);
       } catch (err) {

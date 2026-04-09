@@ -6,9 +6,7 @@
     column-gap: 10px;
     padding: 10px 10vw;
     height: 100px;
-    background-color: var(--green);
-    /* box-shadow: inset 0px -2px 7px -4px #000000; */
-}
+    background-color: var(--green);}
 
 .heading {
     color: var(--cream);
@@ -23,4 +21,10 @@
 .links > a {
     color: var(--cream);
     text-decoration: none;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+.underlined {
+    border-bottom: 2px solid var(--cream);
 }

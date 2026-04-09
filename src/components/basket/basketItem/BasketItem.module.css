@@ -6,7 +6,6 @@
     padding: 20px;
     border-radius: 10px;
     column-gap: 10px;
-    grid-column: 1 / 2;
     width: 800px;
     margin-bottom: 10px;
 }
@@ -30,7 +29,6 @@
 .content_container {
     display: flex;
     column-gap: 30px;
-    max-width: 80%;
 }
 
 .details {
