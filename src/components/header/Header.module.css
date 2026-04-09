@@ -38,6 +38,10 @@
     padding-bottom: 5px;
 }
 
+.links > a:hover {
+    color: #fcf6de;
+}
+
 .underlined {
     border-bottom: 2px solid var(--cream);
 }

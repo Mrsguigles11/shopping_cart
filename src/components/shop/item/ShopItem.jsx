@@ -28,11 +28,12 @@ export function ShopItem({ data, addItem }) {
                   setQuantity((prev) => prev - 1);
                 }
               }}
+              className={styles.quantity_button}
             >
               -
             </button>
             <div>{quantity}</div>
-            <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+            <button onClick={() => setQuantity((prev) => prev + 1)} className={styles.quantity_button}>+</button>
         </div>
         </div>
       </div>

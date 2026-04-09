@@ -14,9 +14,9 @@ export function BasketItem({item, removeItem, editQuantity}) {
             <h2>{item.title}</h2>
             <div>
               <div className={styles.quantity}>
-                <button onClick={() => editQuantity("decrease", item.id)}>-</button>
+                <button onClick={() => editQuantity("decrease", item.id)} className={styles.quantity_button}>-</button>
                 <div>{item.quantity}</div>
-                <button onClick={() => editQuantity("increase", item.id)}>+</button>
+                <button onClick={() => editQuantity("increase", item.id)} className={styles.quantity_button}>+</button>
               </div>
               <button className={styles.remove_button} onClick={() => removeItem(item.id, item.quantity)}>Remove</button>
             </div>

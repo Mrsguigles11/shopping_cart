@@ -19,11 +19,15 @@
     column-gap: 5px;
 }
 
-.quantity > button {
+.quantity_button {
     width: 20px;
     border: none;
     font-family: inherit;
     cursor: pointer;
+}
+
+.quantity_button:hover {
+    background-color: rgb(211, 206, 206);
 }
 
 .content_container {
