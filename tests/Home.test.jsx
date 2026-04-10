@@ -5,7 +5,6 @@ import userEvent from "@testing-library/user-event";
 import routes from "../src/routes";
 import App from "../src/App";
 
-
 describe("Home", () => {
   it("shop now button takes you to shop", async () => {
     const user = userEvent.setup();
