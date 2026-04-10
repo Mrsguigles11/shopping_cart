@@ -8,11 +8,11 @@ export function Home() {
       <div className={styles.home_content}>
         <div className={styles.home_content_txt}>
           <h2 className={styles.title}>Welcome to the Odin Shop</h2>
-          <i>
-            Come check out our totally real items in this totally real shop
-          </i>
+          <i>Come check out our totally real items in this totally real shop</i>
         </div>
-        <Link to="/shop" className={styles.link}>Shop Now</Link>
+        <Link to="/shop" className={styles.link}>
+          Shop Now
+        </Link>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ describe("Shop", () => {
     });
   });
   it("changes basket quantity when adding item to basket", async () => {
-    const {user} = setup();
+    const { user } = setup();
 
     const addToBasket = screen.getAllByRole("button", {
       name: "Add to Basket",
@@ -37,7 +37,7 @@ describe("Shop", () => {
     expect(basket.textContent).toContain("1");
   });
   it("changes item quantity when using plus and minus buttons", async () => {
-    const {user} = setup();
+    const { user } = setup();
 
     const addButton = screen.getAllByRole("button", { name: "+" })[0];
     const minusButton = screen.getAllByRole("button", { name: "-" })[0];
@@ -49,14 +49,14 @@ describe("Shop", () => {
     expect(quantity.textContent).toMatch("1");
   });
   it("changes basket quantity when adding multiple items to basket", async () => {
-    const {user} = setup();
+    const { user } = setup();
 
     const addToBasket = screen.getAllByRole("button", {
       name: "Add to Basket",
     })[0];
     const addButton = screen.getAllByRole("button", { name: "+" })[0];
     const basket = screen.getAllByRole("link")[2];
-    
+
     await user.click(addButton);
     await user.click(addToBasket);
     expect(basket.textContent).toContain("2");

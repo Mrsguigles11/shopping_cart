@@ -8,17 +8,19 @@ import App from "../src/App";
 describe("Home", () => {
   it("shop now button takes you to shop", async () => {
     const user = userEvent.setup();
-    
+
     const router = createMemoryRouter(routes, {
-      initialEntries: ["/"], 
+      initialEntries: ["/"],
     });
     render(<RouterProvider router={router} />);
 
-    const shopNow = screen.getByRole("link", {name: "Shop Now"});
+    const shopNow = screen.getByRole("link", { name: "Shop Now" });
     await user.click(shopNow);
 
-    await waitFor(() => expect(
-      screen.getByRole("heading", { name: "Red Lipstick" }),
-    ).toBeInTheDocument());
+    await waitFor(() =>
+      expect(
+        screen.getByRole("heading", { name: "Red Lipstick" }),
+      ).toBeInTheDocument(),
+    );
   });
 });

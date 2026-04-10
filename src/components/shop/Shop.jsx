@@ -13,8 +13,13 @@ export function Shop() {
       <div className={styles.container}>
         {error ? (
           <div className={styles.error}>
-          <div>Oops something went wrong!</div>
-          <button onClick={getData} className={`${styles.error_button} button`}>Try Again</button>
+            <div>Oops something went wrong!</div>
+            <button
+              onClick={getData}
+              className={`${styles.error_button} button`}
+            >
+              Try Again
+            </button>
           </div>
         ) : (
           <></>

@@ -73,7 +73,7 @@ describe("Basket", () => {
       expect(screen.getByText("Subtotal (1 items)")).toBeInTheDocument();
     });
   });
-    it("allows user to remove items", async () => {
+  it("allows user to remove items", async () => {
     const { user, router } = setup();
 
     const addToBasket = await waitFor(
@@ -86,11 +86,15 @@ describe("Basket", () => {
     await user.click(addToBasket);
     await router.navigate("/basket");
 
-    const remove = await waitFor(() => screen.getByRole("button", {name: "Remove"}))
-    await user.click(remove)
+    const remove = await waitFor(() =>
+      screen.getByRole("button", { name: "Remove" }),
+    );
+    await user.click(remove);
 
     await waitFor(() => {
-      expect(screen.queryByText("Essence Mascara Lash Princess")).not.toBeInTheDocument();
+      expect(
+        screen.queryByText("Essence Mascara Lash Princess"),
+      ).not.toBeInTheDocument();
     });
   });
 });

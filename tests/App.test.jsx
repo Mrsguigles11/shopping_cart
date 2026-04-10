@@ -4,11 +4,10 @@ import { createMemoryRouter, RouterProvider } from "react-router";
 import routes from "../src/routes";
 import App from "../src/App";
 
-
 describe("App", () => {
   it("loads home on page load", () => {
     const router = createMemoryRouter(routes, {
-      initialEntries: ["/"], 
+      initialEntries: ["/"],
     });
 
     render(<RouterProvider router={router} />);

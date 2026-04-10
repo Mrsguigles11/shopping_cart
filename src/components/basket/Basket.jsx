@@ -4,7 +4,8 @@ import "../../App.css";
 import { BasketItem } from "./basketItem/BasketItem";
 
 export function Basket() {
-  const { basket, removeItem, editQuantity, totalPrice, total } = useOutletContext();
+  const { basket, removeItem, editQuantity, totalPrice, total } =
+    useOutletContext();
 
   return (
     <div className={`${styles.basket} content`}>

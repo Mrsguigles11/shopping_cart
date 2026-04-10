@@ -18,7 +18,12 @@ export function ShopItem({ data, addItem }) {
       <div>
         <p className={styles.price}>${data.price}</p>
         <div className={styles.buttons}>
-          <button onClick={() => addItem(data.id, quantity, data.title, data.thumbnail, data.price)} className={`${styles.add_to_basket} button`}>
+          <button
+            onClick={() =>
+              addItem(data.id, quantity, data.title, data.thumbnail, data.price)
+            }
+            className={`${styles.add_to_basket} button`}
+          >
             Add to Basket
           </button>
           <div className={styles.quantity}>
@@ -33,8 +38,13 @@ export function ShopItem({ data, addItem }) {
               -
             </button>
             <div>{quantity}</div>
-            <button onClick={() => setQuantity((prev) => prev + 1)} className={styles.quantity_button}>+</button>
-        </div>
+            <button
+              onClick={() => setQuantity((prev) => prev + 1)}
+              className={styles.quantity_button}
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
     </div>
