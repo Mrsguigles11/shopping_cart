@@ -9,6 +9,7 @@
     grid-template-columns: 2fr repeat(3, 1fr);
     border-bottom: 1px solid rgba(58, 58, 58, 0.237);
     padding-bottom: 40px;
+    column-gap: 5px;
 }
 
 .heading {
@@ -44,4 +45,21 @@
     font-size: 0.7rem;
     padding-top: 20px;
     color: rgba(58, 58, 58, 0.848);
+}
+
+@media (max-width: 425px) {
+    .footer_links {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 30px;
+    column-gap: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer_links {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 30px;
+    column-gap: 20px;
+    row-gap: 10px;
+    }
 }

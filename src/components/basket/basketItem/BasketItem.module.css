@@ -58,3 +58,36 @@
     margin-top: 10px;
     cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 50vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        max-width: 80vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .content_container {
+        column-gap: 10px;
+        align-items: center;
+    }
+    .content_container > img {
+        width: 80px;
+        height: 80px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .container > h2 {
+        font-size: 1rem;
+    }
+    .details > h2 {
+        font-size: 0.6rem;
+    }
+}

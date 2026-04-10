@@ -32,7 +32,30 @@
     border-radius: 15px;
 }
 
-.header {
+.title {
     font-size: 4rem;
     text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .title {
+        font-size: 2rem;
+    }
+    .home_content_txt > i {
+        font-size: 0.8rem;
+        max-width: 250px;
+        text-align: center;
+    }
+    .link {
+        padding: 5px 20px;
+    }
+    .home_content {
+        row-gap: 30px;
+    }
 }
