@@ -1,6 +1,8 @@
 import styles from "./Header.module.css";
+import odinLogo from "../../img/odin_logo.png"
 import { Link } from "react-router";
 import { useState } from "react";
+
 
 export default function Header({total}) {
   const [currentPage, setCurrentPage] = useState("home")
@@ -8,7 +10,7 @@ export default function Header({total}) {
   return (
     <div className={styles.header}>
       <div className={styles.heading_container}>
-        <img src="../src/img/odin_logo.png" alt="odin_shop_logo" className={styles.logo}/>
+        <img src={odinLogo} alt="odin_shop_logo" className={styles.logo}/>
         <h1 className={styles.heading}>ODIN</h1>
       </div>
       <div className={styles.links}>
