@@ -26,30 +26,71 @@ describe("Basket", () => {
         "Oops nothing here yet! Add items in the shop to review the basket",
       ),
     ).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "0" }).textContent).toMatch("0");
   });
-  it("shows item added to basket", async () => {
-    const {user} = setup();
+  it("renders items in basket", async () => {
+    const { user, router } = setup();
 
-    const addToBasket = screen.getAllByRole("button", {
-      name: "Add to Basket",
-    })[0];
-    const basket = screen.getAllByRole("link")[2];
+    const addToBasket = await waitFor(
+      () =>
+        screen.getAllByRole("button", {
+          name: "Add to Basket",
+        })[0],
+    );
 
     await user.click(addToBasket);
-    expect(basket.textContent).toMatch("Basket 1");
-    // await router.navigate('/basket');
+    await router.navigate("/basket");
 
-    // await waitFor(() => {
-    //   expect(
-    //     screen.getByRole("heading", { name: "109.95" }).textContent,
-    //   ).toMatch("109.95");
-    // });
-//     await waitFor (() => {expect(
-//       screen.getByText(
-//         "Oops nothing here yet! Add items in the shop to review the basket",
-//       ),
-//     ).toBeInTheDocument();
-// })
+    await waitFor(() => {
+      expect(screen.getByText("Subtotal (1 items)")).toBeInTheDocument();
+    });
+  });
+  it("allows user to edit quantity of items", async () => {
+    const { user, router } = setup();
+
+    const addToBasket = await waitFor(
+      () =>
+        screen.getAllByRole("button", {
+          name: "Add to Basket",
+        })[0],
+    );
+
+    await user.click(addToBasket);
+    await router.navigate("/basket");
+
+    const increaseQuantity = await waitFor(() =>
+      screen.getByRole("button", { name: "+" }),
+    );
+    await user.click(increaseQuantity);
+    await waitFor(() => {
+      expect(screen.getByText("Subtotal (2 items)")).toBeInTheDocument();
+    });
+
+    const decreaseQuantity = await waitFor(() =>
+      screen.getByRole("button", { name: "-" }),
+    );
+    await user.click(decreaseQuantity);
+    await waitFor(() => {
+      expect(screen.getByText("Subtotal (1 items)")).toBeInTheDocument();
+    });
+  });
+    it("allows user to remove items", async () => {
+    const { user, router } = setup();
+
+    const addToBasket = await waitFor(
+      () =>
+        screen.getAllByRole("button", {
+          name: "Add to Basket",
+        })[0],
+    );
+
+    await user.click(addToBasket);
+    await router.navigate("/basket");
+
+    const remove = await waitFor(() => screen.getByRole("button", {name: "Remove"}))
+    await user.click(remove)
+
+    await waitFor(() => {
+      expect(screen.queryByText("Essence Mascara Lash Princess")).not.toBeInTheDocument();
+    });
   });
 });

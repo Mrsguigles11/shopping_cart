@@ -22,7 +22,7 @@ describe("Shop", () => {
 
     expect(screen.getByText("Loading...")).toBeInTheDocument();
     await waitFor(() => {
-      expect(screen.getByText("Mens Cotton Jacket")).toBeInTheDocument();
+      expect(screen.getByText("Red Lipstick")).toBeInTheDocument();
     });
   });
   it("changes basket quantity when adding item to basket", async () => {
@@ -34,7 +34,7 @@ describe("Shop", () => {
     const basket = screen.getAllByRole("link")[2];
 
     await user.click(addToBasket);
-    expect(basket.textContent).toMatch("Basket 1");
+    expect(basket.textContent).toMatch("Basket (1)");
   });
   it("changes item quantity when using plus and minus buttons", async () => {
     const {user} = setup();
@@ -59,6 +59,6 @@ describe("Shop", () => {
     
     await user.click(addButton);
     await user.click(addToBasket);
-    expect(basket.textContent).toMatch("Basket 2");
+    expect(basket.textContent).toMatch("Basket (2)");
   });
 });
