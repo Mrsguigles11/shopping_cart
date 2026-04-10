@@ -1,65 +1,65 @@
 .footer {
-    min-height: 200px;
-    background-color: #E3DBBB;
-    padding: 40px 5vw 20px;
+  min-height: 200px;
+  background-color: #e3dbbb;
+  padding: 40px 5vw 20px;
 }
 
 .footer_links {
-    display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
-    border-bottom: 1px solid rgba(58, 58, 58, 0.237);
-    padding-bottom: 40px;
-    column-gap: 5px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  border-bottom: 1px solid rgba(58, 58, 58, 0.237);
+  padding-bottom: 40px;
+  column-gap: 5px;
 }
 
 .heading {
-    margin-bottom: 15px;
-    font-size: 1rem;
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .shop_name {
-    font-size: 1rem;
-    margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 .secondary_text {
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-    color: rgb(58, 58, 58);
-    cursor: pointer;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+  color: rgb(58, 58, 58);
+  cursor: pointer;
 }
 
 .italic {
-    font-size: 0.8rem;
-    color: rgb(58, 58, 58);
-    margin-top: -15px;
+  font-size: 0.8rem;
+  color: rgb(58, 58, 58);
+  margin-top: -15px;
 }
 
 .secondary_text:hover {
-    color: rgb(115, 115, 115);
+  color: rgb(115, 115, 115);
 }
 
 .copyright {
-    display: flex;
-    justify-content: center;
-    font-size: 0.7rem;
-    padding-top: 20px;
-    color: rgba(58, 58, 58, 0.848);
+  display: flex;
+  justify-content: center;
+  font-size: 0.7rem;
+  padding-top: 20px;
+  color: rgba(58, 58, 58, 0.848);
 }
 
 @media (max-width: 425px) {
-    .footer_links {
+  .footer_links {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 30px;
     column-gap: 20px;
-    }
+  }
 }
 
 @media (max-width: 320px) {
-    .footer_links {
+  .footer_links {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 30px;
     column-gap: 20px;
     row-gap: 10px;
-    }
+  }
 }

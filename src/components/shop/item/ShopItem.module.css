@@ -1,70 +1,70 @@
 .container {
-    height: 350px;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    background-color: white;
-    justify-content: space-between;
+  height: 350px;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: white;
+  justify-content: space-between;
 }
 
 .image {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
-    align-self: center;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  align-self: center;
 }
 
 .heading {
-    font-size: 0.8rem;
-    margin-bottom: 5px;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
 }
 
 .description {
-    font-size: 0.6rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  font-size: 0.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .img_heading_container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .price {
-    font-size: 1rem;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .buttons {
-    display: flex;
-    column-gap: 10px;
-    align-items: center;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
 }
 
 .add_to_basket {
-    border-radius: 5px;
-    padding: 5px 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .quantity {
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-    height: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  height: fit-content;
 }
 
 .quantity_button {
-    height: 30px;
-    width: 20px;
-    border: none;
-    cursor: pointer;
+  height: 30px;
+  width: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .quantity_button:hover {
-    background-color: rgb(211, 206, 206);
+  background-color: rgb(211, 206, 206);
 }

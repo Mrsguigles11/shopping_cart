@@ -1,60 +1,61 @@
 .basket {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 20px 40px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px 40px 40px;
 }
 
 .basket_content {
-    display: flex;
-    column-gap: 20px;
+  display: flex;
+  column-gap: 20px;
 }
 
 img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .total {
-    background-color: white;
-    height: 200px;
-    width: 250px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
+  background-color: white;
+  height: 200px;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
-.total > h2, .total > p {
-    font-weight: bold;
-    font-size: 1.2rem;
+.total > h2,
+.total > p {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .subtotal {
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: space-between;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .checkout {
-    border-radius: 5px;
-    padding: 5px 0;
+  border-radius: 5px;
+  padding: 5px 0;
 }
 
 @media (max-width: 1024px) {
-    .total {
-        max-width: 30vw;
-    }
+  .total {
+    max-width: 30vw;
+  }
 }
 
 @media (max-width: 425px) {
-    .basket_content {
-        flex-direction: column;
-    }
-    .total {
-        max-width: 80vw;
-        align-self: center;
-    }
+  .basket_content {
+    flex-direction: column;
+  }
+  .total {
+    max-width: 80vw;
+    align-self: center;
+  }
 }

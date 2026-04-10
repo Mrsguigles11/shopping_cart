@@ -1,19 +1,19 @@
 .content {
-    background-color: #F8F3E1;
-    flex-grow: 1;
-    min-height: calc(100vh - 100px);
+  background-color: #f8f3e1;
+  flex-grow: 1;
+  min-height: calc(100vh - 100px);
 }
 
 .button {
-    text-decoration: none;
-    background-color: var(--green);
-    color: var(--cream);
-    font-family: inherit;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  text-decoration: none;
+  background-color: var(--green);
+  color: var(--cream);
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .button:hover {
-    background-color: #5d6033;
+  background-color: #5d6033;
 }

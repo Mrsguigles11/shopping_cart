@@ -1,50 +1,51 @@
 .shop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 100px;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, 220px);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 220px);
+  gap: 20px;
 }
 
-.loading, .error {
-    grid-column-start: 3;
-    justify-self: center;
+.loading,
+.error {
+  grid-column-start: 3;
+  justify-self: center;
 }
 
 .error {
-    text-align: center;
+  text-align: center;
 }
 
 .error_button {
-    padding: 10px 20px;
-    margin-top: 10px;
+  padding: 10px 20px;
+  margin-top: 10px;
 }
 
 @media (max-width: 1024px) {
-    .container {
-        grid-template-columns: repeat(4, 220px);
-    }
+  .container {
+    grid-template-columns: repeat(4, 220px);
+  }
 }
 
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(3, 220px);
-    }
+  .container {
+    grid-template-columns: repeat(3, 220px);
+  }
 }
 
 @media (max-width: 425px) {
-    .container {
-        grid-template-columns: repeat(2, 180px);
-    }
+  .container {
+    grid-template-columns: repeat(2, 180px);
+  }
 }
 
 @media (max-width: 375px) {
-    .container {
-        grid-template-columns: 220px;
-    }
+  .container {
+    grid-template-columns: 220px;
+  }
 }
