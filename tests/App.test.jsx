@@ -14,7 +14,7 @@ describe("App", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      screen.getByRole("heading", { name: "Home" }),
+      screen.getByRole("heading", { name: "Welcome to the Odin Shop" }),
     ).toBeInTheDocument();
   });
 });
