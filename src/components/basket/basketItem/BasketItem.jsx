@@ -9,7 +9,7 @@ export function BasketItem({item, removeItem, editQuantity}) {
           alt={item.title + " image"}
         />
         <div className={styles.details}>
-          <h2>{item.title}</h2>
+          <p className={styles.item_title}>{item.title}</p>
           <div>
             <div className={styles.quantity}>
               <button onClick={() => editQuantity("decrease", item.id)} className={styles.quantity_button}>-</button>
@@ -20,7 +20,7 @@ export function BasketItem({item, removeItem, editQuantity}) {
           </div>
         </div>
       </div>
-      <h2>${Math.round((item.quantity * item.price) * 100) / 100}</h2>
+      <p className={styles.item_price}>${Math.round((item.quantity * item.price) * 100) / 100}</p>
     </div>
   );
 }

@@ -28,8 +28,8 @@ export function Basket() {
             })}
           </div>
           <div className={styles.total}>
-            <h3>Order Summary</h3>
-            <h2>${totalPrice}</h2>
+            <h2>Order Summary</h2>
+            <p>${totalPrice}</p>
             <div className={styles.subtotal}>
               <p>Subtotal ({total} items)</p>
               <p>${totalPrice}</p>

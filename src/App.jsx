@@ -9,13 +9,13 @@ function App() {
     useBasketFunc();
 
   return (
-    <>
+    <main>
       <Header total={total} />
       <Outlet
         context={{ addItem, basket, removeItem, editQuantity, totalPrice, total }}
       />
       <Footer />
-    </>
+    </main>
   );
 }
 

@@ -27,6 +27,11 @@ img {
     border-radius: 10px;
 }
 
+.total > h2, .total > p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 .subtotal {
     font-size: 0.8rem;
     display: flex;

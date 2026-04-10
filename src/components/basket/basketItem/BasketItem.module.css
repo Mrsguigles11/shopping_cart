@@ -11,8 +11,9 @@
     margin-bottom: 10px;
 }
 
-.container > h2 {
+.item_price {
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .quantity {
@@ -44,8 +45,9 @@
     row-gap: 10px;
 }
 
-.details > h2 {
+.item_title {
     font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .remove_button {
@@ -84,10 +86,10 @@
     .container {
         padding: 10px;
     }
-    .container > h2 {
+    .item_price {
         font-size: 1rem;
     }
-    .details > h2 {
+    .item_title {
         font-size: 0.6rem;
     }
 }
